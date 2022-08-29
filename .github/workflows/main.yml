@@ -9,8 +9,10 @@ jobs:
     steps:
       - name: clone repository
         uses: actions/checkout@v2
-      - name: docker
-        uses: ./
+      - name: docker build
+        run: docker build . -t reacts-app:latest  
+      # - name: docker
+        # uses: ./
       # - name: use node  version node.js 17.x
       #   uses: actions/setup-node@v1
       #   with:
