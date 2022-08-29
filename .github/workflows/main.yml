@@ -13,7 +13,7 @@ jobs:
     steps:
       - name: clone repository
         uses: actions/checkout@v2
-      - name: login to github conatiner registry
+      - name: login to github container registry
         uses: docker/login-action@v1
         with:
            registry: ghcr.io
@@ -23,6 +23,8 @@ jobs:
         run: docker build . -t ghcr.io/bharti2022/sample-reacts-app:latest
       - name: docker push  
         run: docker push ghcr.io/bharti2022/sample-reacts-app:latest
+      - name: run test cases
+        run:  npm run test
 
       # - name: docker
         # uses: ./
