@@ -23,7 +23,11 @@ jobs:
         run: docker build . -t ghcr.io/bharti2022/sample-reacts-app:latest
       - name: docker push  
         run: docker push ghcr.io/bharti2022/sample-reacts-app:latest
+      - name: run docker
+        run: docker run ghcr.io/bharti2022/sample-reacts-app:latest
+        
 
+        
       # - name: docker
         # uses: ./
       # - name: use node  version node.js 17.x
