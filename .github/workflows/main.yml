@@ -10,7 +10,7 @@ jobs:
       - name: clone repository
         uses: actions/checkout@v2
       - name: docker build
-        run: docker build . -t reacts-app:latest  
+        run: docker build . -t bhartisagar/reacts-app:latest  
       # - name: docker
         # uses: ./
       # - name: use node  version node.js 17.x
