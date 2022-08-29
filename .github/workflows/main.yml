@@ -1,6 +1,10 @@
 name: Github Action Examples
 
-on: [push]
+on:
+  push:
+    branch:
+      - docker-image
+
 
 jobs:
   build:
