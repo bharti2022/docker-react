@@ -1,14 +1,13 @@
-FROM node:18
+FROM node:16
 
 WORKDIR /app
 
-COPY . ./
+COPY ["package.json", "package-lock.json*", "./"]
 
-RUN ls 
+RUN npm install
 
-RUN npm i
+COPY . .
 
-ENTRYPOINT ["npm","run","build"]
+EXPOSE 3000
 
-CMD npm start
-
+CMD ["npm","start"]
