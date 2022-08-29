@@ -1,5 +1,0 @@
-name: docker file run
-
-runs:
-  using: "docker"
-  image: "Dockerfile"
